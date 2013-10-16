@@ -26,10 +26,6 @@ public class HttpNettyServerInitializer extends ChannelInitializer<SocketChannel
     public void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline p = ch.pipeline();
 
-        // Uncomment the following line if you want HTTPS
-        //SSLEngine engine = SecureChatSslContextFactory.getServerContext().createSSLEngine();
-        //engine.setUseClientMode(false);
-        //p.addLast("ssl", new SslHandler(engine));
         p.addLast("shaper", new ChannelTrafficShapingHandler(1000));
         p.addLast("codec", new HttpServerCodec());
 
