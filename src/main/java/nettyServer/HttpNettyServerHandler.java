@@ -23,10 +23,7 @@ import io.netty.handler.traffic.ChannelTrafficShapingHandler;
 import static io.netty.buffer.Unpooled.copiedBuffer;
 
 public class HttpNettyServerHandler extends ChannelInboundHandlerAdapter {
-    {
-        System.out.println("new HttpNettyServerHandler is init" );
-        System.out.println(Thread.activeCount());
-    }
+
     private static StatisticsCollector collector = new StatisticsCollector();
 
 
