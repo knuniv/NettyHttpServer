@@ -22,6 +22,10 @@ public class HelloWorldHttpResponse extends HttpRestonse {
                 "<header><title>This is title</title></header>\n" +
                 "<body>\n" + "Hello world\n" +
                  "</body>\n" + "</html>");
+        responseContent.append("<html>\n" +
+                "<header><title>This is title</title></header>\n" +
+                "<body>\n" + "Hello world\n" +
+                "</body>\n" + "</html>");
         try {
 
 
